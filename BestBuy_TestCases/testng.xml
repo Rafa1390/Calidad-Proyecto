@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+<test verbose="2" name="BestBuy_TestCases">
+    <parameter name="Browser" value="Chrome" />
+    <parameter name="URL" value="https://www.bestbuy.com/?intl=nosplash" />
+    <classes>
+        <class name="BestBuy.TestBestBuyPage">
+            <methods>
+                <exclude name="firstTest"/>
+            </methods>
+        </class>
+        <class name="BestBuy.TestCreateAccount">
+            <parameter name="first-name" value="Carlos"/>
+            <parameter name="last-name" value="Alvarado"/>
+            <parameter name="email" value="testguy3@yopmail.com"/>
+            <parameter name="password" value="CarlosTesting123"/>
+            <parameter name="phone-number" value="871‑495‑1632"/>
+            <methods>
+                <include name="createAccountTest"/>
+            </methods>
+        </class>
+    </classes>
+</test>
+</suite>
