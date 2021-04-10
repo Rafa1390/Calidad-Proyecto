@@ -21,6 +21,13 @@ public class BestBuyHomePage extends BasePage{
     By Save_Phone_Number_Btn = By.xpath("//button[contains(text(),'Continue')]");
     By Search_Input = By.xpath("//*[@id=\"gh-search-input\"]");
     By Brands_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[1]/ul/li[2]/button");
+    By Lenovo_Shop_Now =  By.linkText("Shop now");
+    By Second_Lenovo_Shop_Now =  By.xpath("//*[@id=\"site-control-content\"]/div[4]/div/div[4]/div/div/div[1]/div/div/div/p/a");
+    By Shop_Computer_Btn =  By.xpath("//a[@href=\"/site/lenovo-yoga-c940-2-in-1-14-touch-screen-laptop-intel-core-i7-12gb-memory-512gb-solid-state-drive-iron-gray/6367799.p?skuId=6367799#tab=buyingOptions?bof=openbox\"]");
+    By Add_To_Cart_Btn =  By.xpath("//*[@class=\"btn btn-primary btn-sm btn-block btn-leading-ficon add-to-cart-button\"]");
+    By Close_Add_To_Cart =  By.xpath("//*[@class=\"btn-default-link close-modal-x\"]");
+    By Cart_Btn = By.xpath("//a[@class=\"cart-link\"]");
+    By Checkout_Btn = By.xpath("//button[text()=\"Checkout\"]");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -94,5 +101,36 @@ public class BestBuyHomePage extends BasePage{
     public void searchByBrand() {
         click(Brands_Btn);
         click(By.xpath("//*[@id=\"header-menu-3\"]/li[3]/ul/li[1]/a"));
+    }
+
+    public void clickLenovoShopNow() {
+        click(Lenovo_Shop_Now);
+    }
+
+    public void clickSecondLenovoShopNow() {
+        click(Second_Lenovo_Shop_Now);
+    }
+
+    public void shopComputer(){
+        click(Shop_Computer_Btn);
+    }
+    public void addComputerToCart() {
+        click(Add_To_Cart_Btn);
+    }
+
+    public void closeAddToCartModal() {
+        click(Close_Add_To_Cart);
+    }
+
+    public void OpenCart() {
+        click(Cart_Btn);
+    }
+
+    public void clickCheckoutBtn() {
+        click(Checkout_Btn);
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 }
