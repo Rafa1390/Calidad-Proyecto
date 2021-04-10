@@ -12,4 +12,8 @@ public class BasePage {
     public void click(By element) { driver.findElement(element).click(); }
 
     public void sendKeys(By element, String text) { driver.findElement(element).sendKeys(text); }
+
+    public String getElementText(By element) {
+        return driver.findElement(element).getText();
+    }
 }

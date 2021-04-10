@@ -6,18 +6,22 @@
     <parameter name="URL" value="https://www.bestbuy.com/?intl=nosplash" />
     <classes>
         <class name="BestBuy.TestBestBuyPage">
+            <parameter name="login-email" value="testguy4@yopmail.com"/>
+            <parameter name="login-password" value="CarlosTesting123"/>
+            <parameter name="recovery-phone" value="3121235431"/>
             <methods>
                 <exclude name="firstTest"/>
+                <include name="validateRecoveryPhoneNumber"/>
             </methods>
         </class>
         <class name="BestBuy.TestCreateAccount">
             <parameter name="first-name" value="Carlos"/>
             <parameter name="last-name" value="Alvarado"/>
-            <parameter name="email" value="testguy3@yopmail.com"/>
+            <parameter name="email" value="testguy4@yopmail.com"/>
             <parameter name="password" value="CarlosTesting123"/>
             <parameter name="phone-number" value="871‑495‑1632"/>
             <methods>
-                <include name="createAccountTest"/>
+                <exclude name="createAccountTest"/>
             </methods>
         </class>
     </classes>
