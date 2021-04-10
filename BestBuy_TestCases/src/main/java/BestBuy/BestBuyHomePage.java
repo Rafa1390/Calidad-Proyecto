@@ -19,6 +19,8 @@ public class BestBuyHomePage extends BasePage{
     By Phone_Numbers_Btn = By.linkText("Phone Numbers");
     By Add_Phone_Number_Btn = By.xpath("//button[contains(text(),'Add')]");
     By Save_Phone_Number_Btn = By.xpath("//button[contains(text(),'Continue')]");
+    By Search_Input = By.xpath("//*[@id=\"gh-search-input\"]");
+    By Brands_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[1]/ul/li[2]/button");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -83,5 +85,14 @@ public class BestBuyHomePage extends BasePage{
 
     public boolean isRecoveryNumberInvalid() {
         return getElementText(By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div[1]/div/div[2]/strong/div")).equals("Please enter a valid mobile phone number capable of receiving texts.");
+    }
+
+    public void addTextInSearchBar(String text) {
+        sendKeys(Search_Input, text);
+    }
+
+    public void searchByBrand() {
+        click(Brands_Btn);
+        click(By.xpath("//*[@id=\"header-menu-3\"]/li[3]/ul/li[1]/a"));
     }
 }

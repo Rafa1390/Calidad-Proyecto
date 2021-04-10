@@ -11,7 +11,7 @@
             <parameter name="recovery-phone" value="3121235431"/>
             <methods>
                 <exclude name="firstTest"/>
-                <include name="validateRecoveryPhoneNumber"/>
+                <exclude name="validateRecoveryPhoneNumber"/>
             </methods>
         </class>
         <class name="BestBuy.TestCreateAccount">
@@ -22,6 +22,11 @@
             <parameter name="phone-number" value="871‑495‑1632"/>
             <methods>
                 <exclude name="createAccountTest"/>
+            </methods>
+        </class>
+        <class name="BestBuy.TestCart">
+            <methods>
+                <include name="buyItemWithoutLogin"/>
             </methods>
         </class>
     </classes>
