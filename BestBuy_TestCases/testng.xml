@@ -46,6 +46,13 @@
                 <include name="addProductCart"/>
             </methods>
         </class>
+        <class name="BestBuy.TestDeleteProduct">
+            <parameter name="email" value="testguy4@yopmail.com"/>
+            <parameter name="password" value="CarlosTesting123"/>
+            <methods>
+                <include name="deleteProductCart"/>
+            </methods>
+        </class>
     </classes>
 </test>
 </suite>

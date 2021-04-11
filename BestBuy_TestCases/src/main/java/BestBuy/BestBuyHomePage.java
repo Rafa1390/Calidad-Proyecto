@@ -37,6 +37,7 @@ public class BestBuyHomePage extends BasePage{
     By Saved_Items_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[4]/button");
     By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
     By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
+    By ButtonDeleteProduct = By.xpath("//a[contains(text(),'Remove')]\n");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -54,6 +55,9 @@ public class BestBuyHomePage extends BasePage{
         click(Create_Account_Btn);
     }
 
+    public void deleteProductCart(){
+        click(ButtonDeleteProduct);
+    }
     public void fillCreateAccountForm(HashMap<String, String> userData ){
         sendKeys(By.name("firstName"), userData.get("firt_name"));
         sendKeys(By.name("lastName"), userData.get("last_name"));
