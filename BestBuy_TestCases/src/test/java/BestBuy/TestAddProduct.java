@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestAddProduct extends BaseTest{
 
-    @Parameters({"login-email", "login-password"})
+    @Parameters({"email", "password"})
     @Test
     public void addProductCart() throws InterruptedException {
         BBHP.clickBestBuy();
