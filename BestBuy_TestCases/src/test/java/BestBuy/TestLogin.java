@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 public class TestLogin extends BaseTest{
 
-    @Test
     @Parameters({"login-email", "login-password"})
-    public void login(String email, String password, String phone) throws InterruptedException {
+    @Test
+    public void login(String email, String password){
         BBHP.clickBestBuy();
         BBHP.loginWorkflow(email, password);
     }

@@ -28,6 +28,7 @@ public class BestBuyHomePage extends BasePage{
     By Close_Add_To_Cart =  By.xpath("//*[@class=\"btn-default-link close-modal-x\"]");
     By Cart_Btn = By.xpath("//a[@class=\"cart-link\"]");
     By Checkout_Btn = By.xpath("//button[text()=\"Checkout\"]");
+    By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);

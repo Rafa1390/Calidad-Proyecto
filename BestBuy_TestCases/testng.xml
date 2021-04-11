@@ -32,6 +32,9 @@
         <class name="BestBuy.TestLogin">
             <parameter name="email" value="testguy4@yopmail.com"/>
             <parameter name="password" value="CarlosTesting123"/>
+            <methods>
+                <include name="login"/>
+            </methods>
         </class>
     </classes>
 </test>
