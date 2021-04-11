@@ -25,8 +25,11 @@
             </methods>
         </class>
         <class name="BestBuy.TestCart">
+            <parameter name="login-email" value="testguy4@yopmail.com"/>
+            <parameter name="login-password" value="CarlosTesting123"/>
             <methods>
-                <include name="buyItemWithoutLogin"/>
+                <exclude name="buyItemWithoutLogin"/>
+                <include name="saveProduct"/>
             </methods>
         </class>
     </classes>
