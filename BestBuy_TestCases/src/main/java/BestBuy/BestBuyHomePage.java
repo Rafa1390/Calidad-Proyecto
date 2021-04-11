@@ -28,6 +28,14 @@ public class BestBuyHomePage extends BasePage{
     By Close_Add_To_Cart =  By.xpath("//*[@class=\"btn-default-link close-modal-x\"]");
     By Cart_Btn = By.xpath("//a[@class=\"cart-link\"]");
     By Checkout_Btn = By.xpath("//button[text()=\"Checkout\"]");
+    By Products_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[1]/ul/li[1]/button");
+    By Wearable_Tec_Btn = By.xpath("//*[@id=\"header-menu-167\"]/li[3]/ul/li[10]/button");
+    By Apple_Watch_Btn = By.xpath("//*[@id=\"header-menu-112\"]/li[1]/button");
+    By Search_Apple_Watch = By.xpath("//*[@id=\"header-menu-112\"]/li[2]/div/ul/li[1]/a");
+    By Apple_Watch_Product = By.linkText("Series 6 GPS + Cellular");
+    By Save_Btn = By.xpath("//*[@id=\"shop-save-for-later-59457cc9-d7d6-4bca-94fa-ff828b2d7bf5\"]/div/div/div/button");
+    By Saved_Items_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[4]/button");
+    By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
     By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
 
     BestBuyHomePage(WebDriver driver) {
@@ -133,5 +141,28 @@ public class BestBuyHomePage extends BasePage{
 
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
+    }
+
+    public void openAppleWatchProducts() {
+        click(Products_Btn);
+        click(Wearable_Tec_Btn);
+        click(Apple_Watch_Btn);
+        click(Search_Apple_Watch);
+    }
+
+    public void selectAppleWatch(){
+        click(Apple_Watch_Product);
+    }
+
+    public void saveProduct() {
+        click(Save_Btn);
+    }
+
+    public void openSavedItems() {
+        click(Saved_Items_Btn);
+    }
+
+    public boolean isItemSaved() {
+        return driver.findElement(Item_Saved).getText().contains("Apple Watch Series 6 (GPS + Cellular)");
     }
 }
