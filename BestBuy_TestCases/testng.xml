@@ -10,8 +10,8 @@
             <parameter name="login-password" value="CarlosTesting123"/>
             <parameter name="recovery-phone" value="3121235431"/>
             <methods>
-                <exclude name="firstTest"/>
-                <exclude name="validateRecoveryPhoneNumber"/>
+                <include name="firstTest"/>
+                <include name="validateRecoveryPhoneNumber"/>
             </methods>
         </class>
         <class name="BestBuy.TestCreateAccount">
@@ -21,14 +21,14 @@
             <parameter name="password" value="CarlosTesting123"/>
             <parameter name="phone-number" value="871‑495‑1632"/>
             <methods>
-                <exclude name="createAccountTest"/>
+                <include name="createAccountTest"/>
             </methods>
         </class>
         <class name="BestBuy.TestCart">
             <parameter name="login-email" value="testguy4@yopmail.com"/>
             <parameter name="login-password" value="CarlosTesting123"/>
             <methods>
-                <exclude name="buyItemWithoutLogin"/>
+                <include name="buyItemWithoutLogin"/>
                 <include name="saveProduct"/>
             </methods>
         </class>
