@@ -16,5 +16,6 @@ public class TestAddProduct extends BaseTest{
         BBHP.shopComputer();
         Thread.sleep(10000);
         BBHP.addComputerToCart();
+        Thread.sleep(6000);
     }
 }

@@ -20,5 +20,6 @@ public class TestDeleteProduct extends BaseTest{
         BBHP.closeAddToCartModal();
         BBHP.OpenCart();
         BBHP.deleteProductCart();
+        Thread.sleep(6000);
     }
 }
