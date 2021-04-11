@@ -36,6 +36,7 @@ public class BestBuyHomePage extends BasePage{
     By Save_Btn = By.xpath("//*[@id=\"shop-save-for-later-59457cc9-d7d6-4bca-94fa-ff828b2d7bf5\"]/div/div/div/button");
     By Saved_Items_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[4]/button");
     By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
+    By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
