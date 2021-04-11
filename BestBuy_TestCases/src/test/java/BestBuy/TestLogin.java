@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestLogin extends BaseTest{
 
-    @Parameters({"login-email", "login-password"})
+    @Parameters({"email", "password"})
     @Test
     public void login(String email, String password){
         BBHP.clickBestBuy();
