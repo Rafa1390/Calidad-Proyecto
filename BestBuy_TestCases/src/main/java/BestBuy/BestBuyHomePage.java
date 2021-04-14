@@ -38,6 +38,7 @@ public class BestBuyHomePage extends BasePage{
     By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
     By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
     By ButtonDeleteProduct = By.xpath("//a[contains(text(),'Remove')]\n");
+    By firstNameInput = By.id("firstName");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -168,5 +169,9 @@ public class BestBuyHomePage extends BasePage{
 
     public boolean isItemSaved() {
         return driver.findElement(Item_Saved).getText().contains("Apple Watch Series 6 (GPS + Cellular)");
+    }
+
+    public void clickInputsCreateAccount(){
+        click(firstNameInput);
     }
 }

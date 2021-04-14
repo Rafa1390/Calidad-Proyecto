@@ -29,4 +29,12 @@ public class TestCreateAccount extends BaseTest{
         data.put("phone_number", phone);
         return data;
     }
+
+    @Test
+    public void userFeedback(){
+        BBHP.clickBestBuy();
+        BBHP.openAccountMenu();
+        BBHP.clickCreateAccount();
+        BBHP.clickInputsCreateAccount();
+    }
 }
