@@ -16,4 +16,8 @@ public class BasePage {
     public String getElementText(By element) {
         return driver.findElement(element).getText();
     }
+
+    public boolean containElementText(By element, String content) {
+        return driver.findElement(element).getText().contains(content);
+    }
 }

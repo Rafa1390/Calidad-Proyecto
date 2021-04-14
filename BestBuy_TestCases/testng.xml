@@ -5,55 +5,65 @@
     <parameter name="Browser" value="Chrome" />
     <parameter name="URL" value="https://www.bestbuy.com/?intl=nosplash" />
     <classes>
-<!--        <class name="BestBuy.TestBestBuyPage">-->
-<!--            <parameter name="login-email" value="testguy4@yopmail.com"/>-->
-<!--            <parameter name="login-password" value="CarlosTesting123"/>-->
-<!--            <parameter name="recovery-phone" value="3121235431"/>-->
-<!--            <methods>-->
-<!--                <include name="firstTest"/>-->
-<!--                <include name="validateRecoveryPhoneNumber"/>-->
-<!--            </methods>-->
-<!--        </class>-->
+        <class name="BestBuy.TestBestBuyPage">
+            <parameter name="login-email" value="testguy4@yopmail.com"/>
+            <parameter name="login-password" value="CarlosTesting123"/>
+            <parameter name="recovery-phone" value="3121235431"/>
+            <methods>
+                <include name="firstTest"/>
+                <include name="validateRecoveryPhoneNumber"/>
+            </methods>
+        </class>
         <class name="BestBuy.TestCreateAccount">
             <parameter name="first-name" value="Carlos"/>
             <parameter name="last-name" value="Alvarado"/>
             <parameter name="email" value="testguy4@yopmail.com"/>
             <parameter name="password" value="CarlosTesting123"/>
             <parameter name="phone-number" value="871‑495‑1632"/>
+            <parameter name="EMAIL" value="correo"></parameter>
+            <parameter name="PASSWORD" value="123"></parameter>
+            <parameter name="C_PASS" value="124"></parameter>
+            <parameter name="PHONE" value="333"></parameter>
+            <parameter name="v_f_name" value="Please enter your first name."></parameter>
+            <parameter name="v_l_name" value="Please enter your last name."></parameter>
+            <parameter name="v_email" value="Please enter a valid email address."></parameter>
+            <parameter name="v_password" value="Please enter a strong password."></parameter>
+            <parameter name="v_c_pass" value="Passwords do not match."></parameter>
+            <parameter name="v_phone" value="Please enter a valid mobile phone number."></parameter>
             <methods>
-                <exclude name="createAccountTest"/>
+                <include name="createAccountTest"/>
                 <include name="userFeedback"/>
             </methods>
         </class>
-<!--        <class name="BestBuy.TestCart">-->
-<!--            <parameter name="login-email" value="testguy4@yopmail.com"/>-->
-<!--            <parameter name="login-password" value="CarlosTesting123"/>-->
-<!--            <methods>-->
-<!--                <include name="buyItemWithoutLogin"/>-->
-<!--                <include name="saveProduct"/>-->
-<!--            </methods>-->
-<!--        </class>-->
-<!--        <class name="BestBuy.TestLogin">-->
-<!--            <parameter name="email" value="testguy4@yopmail.com"/>-->
-<!--            <parameter name="password" value="CarlosTesting123"/>-->
-<!--            <methods>-->
-<!--                <include name="login"/>-->
-<!--            </methods>-->
-<!--        </class>-->
-<!--        <class name="BestBuy.TestAddProduct">-->
-<!--            <parameter name="email" value="testguy4@yopmail.com"/>-->
-<!--            <parameter name="password" value="CarlosTesting123"/>-->
-<!--            <methods>-->
-<!--                <include name="addProductCart"/>-->
-<!--            </methods>-->
-<!--        </class>-->
-<!--        <class name="BestBuy.TestDeleteProduct">-->
-<!--            <parameter name="email" value="testguy4@yopmail.com"/>-->
-<!--            <parameter name="password" value="CarlosTesting123"/>-->
-<!--            <methods>-->
-<!--                <include name="deleteProductCart"/>-->
-<!--            </methods>-->
-<!--        </class>-->
+        <class name="BestBuy.TestCart">
+            <parameter name="login-email" value="testguy4@yopmail.com"/>
+            <parameter name="login-password" value="CarlosTesting123"/>
+            <methods>
+                <include name="buyItemWithoutLogin"/>
+                <include name="saveProduct"/>
+            </methods>
+        </class>
+        <class name="BestBuy.TestLogin">
+            <parameter name="email" value="testguy4@yopmail.com"/>
+            <parameter name="password" value="CarlosTesting123"/>
+            <methods>
+                <include name="login"/>
+            </methods>
+        </class>
+        <class name="BestBuy.TestAddProduct">
+            <parameter name="email" value="testguy4@yopmail.com"/>
+            <parameter name="password" value="CarlosTesting123"/>
+            <methods>
+                <include name="addProductCart"/>
+            </methods>
+        </class>
+        <class name="BestBuy.TestDeleteProduct">
+            <parameter name="email" value="testguy4@yopmail.com"/>
+            <parameter name="password" value="CarlosTesting123"/>
+            <methods>
+                <include name="deleteProductCart"/>
+            </methods>
+        </class>
     </classes>
 </test>
 </suite>
