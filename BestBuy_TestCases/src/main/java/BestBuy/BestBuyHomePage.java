@@ -52,6 +52,7 @@ public class BestBuyHomePage extends BasePage{
     By phoneSpan = By.id("phone-text");
     By totalCartZero = By.xpath("//div[contains(text(),\"$0.00\")]");
     By carouselProducts = By.xpath("//div[contains(@class,\"pager-carousel \")]");
+    By giftCardsAnchor = By.xpath("//a[contains(text(), \"Gift Cards\")]");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -220,15 +221,15 @@ public class BestBuyHomePage extends BasePage{
         return containElementText(phoneSpan, content);
     }
 
-    public void clickCart(){
-        click(Cart_Btn);
-    }
-
     public boolean displayedCartZero(){
         return displayedElement(totalCartZero);
     }
 
     public boolean displayedCarouselProducts(){
         return displayedElement(carouselProducts);
+    }
+
+    public void clickGiftCards(){
+        click(giftCardsAnchor);
     }
 }
