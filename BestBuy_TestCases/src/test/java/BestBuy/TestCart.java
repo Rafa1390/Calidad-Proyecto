@@ -38,4 +38,12 @@ public class TestCart extends BaseTest{
         Thread.sleep(5000);
         Assert.assertTrue(BBHP.isItemSaved());
     }
+
+    @Test
+    public void emptyCart(){
+        BBHP.clickBestBuy();
+        BBHP.clickCart();
+        Assert.assertTrue(BBHP.displayedCartZero());
+        Assert.assertTrue(BBHP.displayedCarouselProducts());
+    }
 }

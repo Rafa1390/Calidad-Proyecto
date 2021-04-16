@@ -50,6 +50,8 @@ public class BestBuyHomePage extends BasePage{
     By passwordSpan = By.id("fld-p1-text");
     By confirmPassSpan = By.id("reenterPassword-text");
     By phoneSpan = By.id("phone-text");
+    By totalCartZero = By.xpath("//div[contains(text(),\"$0.00\")]");
+    By carouselProducts = By.xpath("//div[contains(@class,\"pager-carousel \")]");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -216,5 +218,17 @@ public class BestBuyHomePage extends BasePage{
 
     public boolean vPhoneContent(String content){
         return containElementText(phoneSpan, content);
+    }
+
+    public void clickCart(){
+        click(Cart_Btn);
+    }
+
+    public boolean displayedCartZero(){
+        return displayedElement(totalCartZero);
+    }
+
+    public boolean displayedCarouselProducts(){
+        return displayedElement(carouselProducts);
     }
 }

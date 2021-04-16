@@ -20,4 +20,8 @@ public class BasePage {
     public boolean containElementText(By element, String content) {
         return driver.findElement(element).getText().contains(content);
     }
+
+    public boolean displayedElement(By element){
+        return driver.findElement(element).isDisplayed();
+    }
 }
