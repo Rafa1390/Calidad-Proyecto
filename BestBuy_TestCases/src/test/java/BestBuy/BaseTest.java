@@ -17,6 +17,9 @@ public class BaseTest {
     public BestBuyHomePage BBHP;
     public BestBuyCreateAccount BBCA;
     public BestBuyCartPage BBCP;
+    public BestBuyGiftCard BBGC;
+    public BestBuyGiftCardList BBGCL;
+    public BestBuyGiftCardConfiguration BBGCC;
 
     @Parameters({"Browser", "URL"})
     @BeforeClass
@@ -41,6 +44,9 @@ public class BaseTest {
         BBHP = new BestBuyHomePage(driver);
         BBCA = new BestBuyCreateAccount(driver);
         BBCP = new BestBuyCartPage(driver);
+        BBGC = new BestBuyGiftCard(driver);
+        BBGCL = new BestBuyGiftCardList(driver);
+        BBGCC = new BestBuyGiftCardConfiguration(driver);
     }
 
     @AfterClass

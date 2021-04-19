@@ -9,7 +9,10 @@ public class TestGiftCard extends BaseTest{
     public void previewGiftCard() throws InterruptedException {
         BBHP.clickBestBuy();
         BBHP.clickGiftCards();
+        BBGC.clickFirstBannerGiftCard();
+        BBGCL.clickWhiteGiftCardOption();
+        BBGCC.clickGiftCardConfiguration();
         Thread.sleep(10000);
-        Assert.assertTrue(BBHP.displayedGiftCardPreview());
+        Assert.assertTrue(BBCP.displayedGiftCardPreview());
     }
 }
