@@ -41,8 +41,7 @@ public class BestBuyHomePage extends BasePage{
 
 
 
-    By totalCartZero = By.xpath("//div[contains(text(),\"$0.00\")]");
-    By carouselProducts = By.xpath("//div[contains(@class,\"pager-carousel \")]");
+
     By giftCardsAnchor = By.xpath("//a[contains(text(), \"Gift Cards\")]");
     By gifCardTypeImg_1 = By.xpath("//img[@src=\"https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/gc_2019_lv-108326.png\"]");
     By whiteGiftCardOption = By.xpath("//a[contains(text(),\"Best Buy white gift card\")]");
@@ -190,13 +189,7 @@ public class BestBuyHomePage extends BasePage{
 
 
 
-    public boolean displayedCartZero(){
-        return displayedElement(totalCartZero);
-    }
 
-    public boolean displayedCarouselProducts(){
-        return displayedElement(carouselProducts);
-    }
 
     public void clickGiftCards(){
         click(giftCardsAnchor);

@@ -43,7 +43,7 @@ public class TestCart extends BaseTest{
     public void emptyCart(){
         BBHP.clickBestBuy();
         BBHP.OpenCart();
-        Assert.assertTrue(BBHP.displayedCartZero());
-        Assert.assertTrue(BBHP.displayedCarouselProducts());
+        Assert.assertTrue(BBCP.displayedCartZero());
+        Assert.assertTrue(BBCP.displayedCarouselProducts());
     }
 }

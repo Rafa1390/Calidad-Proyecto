@@ -16,6 +16,7 @@ public class BaseTest {
     public WebDriver driver;
     public BestBuyHomePage BBHP;
     public BestBuyCreateAccount BBCA;
+    public BestBuyCartPage BBCP;
 
     @Parameters({"Browser", "URL"})
     @BeforeClass
@@ -39,6 +40,7 @@ public class BaseTest {
     public void methodLevelSetUp(){
         BBHP = new BestBuyHomePage(driver);
         BBCA = new BestBuyCreateAccount(driver);
+        BBCP = new BestBuyCartPage(driver);
     }
 
     @AfterClass
