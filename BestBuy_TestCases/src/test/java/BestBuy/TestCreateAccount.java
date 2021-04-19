@@ -41,14 +41,14 @@ public class TestCreateAccount extends BaseTest{
         BBHP.clickBestBuy();
         BBHP.openAccountMenu();
         BBHP.clickCreateAccount();
-        BBHP.clickInputsCreateAccount();
-        BBHP.sendTestInfoInputsAccount(email, password, cPass, phone);
-        BBHP.createAccount();
-        Assert.assertTrue(BBHP.vFirstNameContent(vFName));
-        Assert.assertTrue(BBHP.vLastNameContent(vLName));
-        Assert.assertTrue(BBHP.vEmailContent(vEmail));
-        Assert.assertTrue(BBHP.vPasswordContent(vPassword));
-        Assert.assertTrue(BBHP.vCPasswordContent(vCPass));
-        Assert.assertTrue(BBHP.vPhoneContent(vPhone));
+        BBCA.clickInputsCreateAccount();
+        BBCA.sendTestInfoInputsAccount(email, password, cPass, phone);
+        BBCA.createAccount();
+        Assert.assertTrue(BBCA.vFirstNameContent(vFName));
+        Assert.assertTrue(BBCA.vLastNameContent(vLName));
+        Assert.assertTrue(BBCA.vEmailContent(vEmail));
+        Assert.assertTrue(BBCA.vPasswordContent(vPassword));
+        Assert.assertTrue(BBCA.vCPasswordContent(vCPass));
+        Assert.assertTrue(BBCA.vPhoneContent(vPhone));
     }
 }

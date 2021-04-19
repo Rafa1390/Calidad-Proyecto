@@ -11,7 +11,7 @@ public class BestBuyHomePage extends BasePage{
     By Close_Email_Modal = By.xpath("//button[@class=\"c-close-icon  c-modal-close-icon\"]");
     By Account_Menu = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[1]/button/div[2]");
     By Create_Account_Btn = By.xpath("//*[@id=\"ABT2465Menu\"]/header/a[2]");
-    By Submit_New_User = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[9]/button");
+    By Submit_New_User = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[9]/button");//***
     By User_Account_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[1]/button");
     By Account_Login_Btn = By.xpath("//*[@id=\"ABT2465Menu\"]/header/a[1]");
     By Login_Btn = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[3]/button");
@@ -38,18 +38,9 @@ public class BestBuyHomePage extends BasePage{
     By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
     By ButtonAddProduct = By.xpath("//button[contains(text(),'Add to Cart')]\n");
     By ButtonDeleteProduct = By.xpath("//a[contains(text(),'Remove')]\n");
-    By firstNameInput = By.id("firstName");
-    By lastNameInput = By.id("lastName");
-    By emailInput = By.id("email");
-    By passwordInput = By.id("fld-p1");
-    By confirmPassInput = By.id("reenterPassword");
-    By phoneInput = By.id("phone");
-    By firstNameSpan = By.id("firstName-text");
-    By lastNameSpan = By.id("lastName-text");
-    By emailSpan = By.id("email-text");
-    By passwordSpan = By.id("fld-p1-text");
-    By confirmPassSpan = By.id("reenterPassword-text");
-    By phoneSpan = By.id("phone-text");
+
+
+
     By totalCartZero = By.xpath("//div[contains(text(),\"$0.00\")]");
     By carouselProducts = By.xpath("//div[contains(@class,\"pager-carousel \")]");
     By giftCardsAnchor = By.xpath("//a[contains(text(), \"Gift Cards\")]");
@@ -90,7 +81,7 @@ public class BestBuyHomePage extends BasePage{
         sendKeys(By.name("phone"), userData.get("phone_number"));
     }
 
-    public void createAccount() {
+    public void createAccount() {//***
         click(Submit_New_User);
     }
 
@@ -193,41 +184,11 @@ public class BestBuyHomePage extends BasePage{
         return driver.findElement(Item_Saved).getText().contains("Apple Watch Series 6 (GPS + Cellular)");
     }
 
-    public void clickInputsCreateAccount(){
-        click(firstNameInput);
-        click(lastNameInput);
-    }
 
-    public void sendTestInfoInputsAccount(String email, String password, String cPass, String phone){
-        sendKeys(emailInput, email);
-        sendKeys(passwordInput, password);
-        sendKeys(confirmPassInput, cPass);
-        sendKeys(phoneInput, phone);
-    }
 
-    public boolean vFirstNameContent(String content){
-        return containElementText(firstNameSpan, content);
-    }
 
-    public boolean vLastNameContent(String content){
-        return containElementText(lastNameSpan, content);
-    }
 
-    public boolean vEmailContent(String content){
-        return containElementText(emailSpan, content);
-    }
 
-    public boolean vPasswordContent(String content){
-        return containElementText(passwordSpan, content);
-    }
-
-    public boolean vCPasswordContent(String content){
-        return containElementText(confirmPassSpan, content);
-    }
-
-    public boolean vPhoneContent(String content){
-        return containElementText(phoneSpan, content);
-    }
 
     public boolean displayedCartZero(){
         return displayedElement(totalCartZero);
