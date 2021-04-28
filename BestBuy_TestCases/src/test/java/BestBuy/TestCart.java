@@ -28,7 +28,8 @@ public class TestCart extends BaseTest{
     @Test
     public void saveProduct(String email, String password) throws InterruptedException {
         BBHP.clickBestBuy();
-        BBHP.loginWorkflow(email, password);
+        BBHP.redirecToLogin();
+        BBL.login(email, password);
         Thread.sleep(8000);
         BBHP.openAppleWatchProducts();
         BBHP.selectAppleWatch();

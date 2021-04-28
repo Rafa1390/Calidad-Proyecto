@@ -13,7 +13,8 @@ public class TestBestBuyPage extends BaseTest{
     @Test
     public void validateRecoveryPhoneNumber(String email, String password, String phone) throws InterruptedException {
         BBHP.clickBestBuy();
-        BBHP.loginWorkflow(email, password);
+        BBHP.redirecToLogin();
+        BBL.login(email, password);
         Thread.sleep(8000);
         BBHP.clickUserAccountBtn();
         BBHP.openAccountSettings();

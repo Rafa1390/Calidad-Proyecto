@@ -14,7 +14,7 @@ public class BestBuyHomePage extends BasePage{
     By Submit_New_User = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[9]/button");//***
     By User_Account_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[1]/button");
     By Account_Login_Btn = By.xpath("//*[@id=\"ABT2465Menu\"]/header/a[1]");
-    By Login_Btn = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[3]/button");
+    By Login_Btn = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[3]/button");//***
     By Account_Settings = By.xpath("//*[@id=\"ABT2465Menu\"]/section[4]/ul/li/a");
     By Phone_Numbers_Btn = By.linkText("Phone Numbers");
     By Add_Phone_Number_Btn = By.xpath("//button[contains(text(),'Add')]");
@@ -76,11 +76,9 @@ public class BestBuyHomePage extends BasePage{
         click(User_Account_Btn);
     }
 
-    public void loginWorkflow(String email, String password) {
+    public void redirecToLogin() {
         openAccountMenu();
         click(Account_Login_Btn);
-        sendKeys(By.name("fld-e"), email);
-        sendKeys(By.name("fld-p1"), password);
         click(Login_Btn);
     }
 
