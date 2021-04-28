@@ -20,6 +20,8 @@ public class BaseTest {
     public BestBuyGiftCard BBGC;
     public BestBuyGiftCardList BBGCL;
     public BestBuyGiftCardConfiguration BBGCC;
+    public BestBuyLogin BBL;
+    public BestBuyPhoneNumbersPage BBPN;
 
     @Parameters({"Browser", "URL"})
     @BeforeClass
@@ -47,6 +49,8 @@ public class BaseTest {
         BBGC = new BestBuyGiftCard(driver);
         BBGCL = new BestBuyGiftCardList(driver);
         BBGCC = new BestBuyGiftCardConfiguration(driver);
+        BBL = new BestBuyLogin(driver);
+        BBPN = new BestBuyPhoneNumbersPage(driver);
     }
 
     @AfterClass

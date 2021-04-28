@@ -10,12 +10,12 @@ public class TestAddProduct extends BaseTest{
     public void addProductCart() throws InterruptedException {
         BBHP.clickBestBuy();
         BBHP.searchByBrand();
-        BBHP.clickLenovoShopNow();
+        BBCP.clickLenovoShopNow();
         Thread.sleep(5000);
-        BBHP.clickSecondLenovoShopNow();
-        BBHP.shopComputer();
+        BBCP.clickSecondLenovoShopNow();
+        BBCP.shopComputer();
         Thread.sleep(10000);
-        BBHP.addComputerToCart();
+        BBCP.addComputerToCart();
         Thread.sleep(6000);
     }
 }

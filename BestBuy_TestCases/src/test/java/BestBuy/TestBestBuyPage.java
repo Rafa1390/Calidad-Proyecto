@@ -13,16 +13,17 @@ public class TestBestBuyPage extends BaseTest{
     @Test
     public void validateRecoveryPhoneNumber(String email, String password, String phone) throws InterruptedException {
         BBHP.clickBestBuy();
-        BBHP.loginWorkflow(email, password);
+        BBHP.redirecToLogin();
+        BBL.login(email, password);
         Thread.sleep(8000);
         BBHP.clickUserAccountBtn();
         BBHP.openAccountSettings();
         BBHP.openPhoneNumbers();
 //        Thread.sleep(7000);
-        BBHP.clickAddNewNumber();
-        BBHP.fillNumberInput(phone);
-        BBHP.saveRecoveryNumber();
+        BBPN.clickAddNewNumber();
+        BBPN.fillNumberInput(phone);
+        BBPN.saveRecoveryNumber();
         Thread.sleep(10000);
-        Assert.assertTrue(BBHP.isRecoveryNumberInvalid(), "Invalid Phone Number");
+        Assert.assertTrue(BBPN.isRecoveryNumberInvalid(), "Invalid Phone Number");
     }
 }

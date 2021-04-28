@@ -3,6 +3,8 @@ package BestBuy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.HashMap;
+
 public class BestBuyCreateAccount extends BasePage{
 
     By Submit_New_User = By.xpath("/html/body/div[1]/div/section/main/div[2]/div[1]/div/div/div/div/form/div[9]/button");//***
@@ -21,6 +23,15 @@ public class BestBuyCreateAccount extends BasePage{
 
     BestBuyCreateAccount(WebDriver driver) {
         super(driver);
+    }
+
+    public void fillCreateAccountForm(HashMap<String, String> userData ){
+        sendKeys(By.name("firstName"), userData.get("firt_name"));
+        sendKeys(By.name("lastName"), userData.get("last_name"));
+        sendKeys(By.name("email"), userData.get("email"));
+        sendKeys(By.name("fld-p1"), userData.get("password"));
+        sendKeys(By.name("reenterPassword"), userData.get("password"));
+        sendKeys(By.name("phone"), userData.get("phone_number"));
     }
 
     public void createAccount() {//***

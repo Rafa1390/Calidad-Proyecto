@@ -9,6 +9,7 @@ public class TestLogin extends BaseTest{
     @Test
     public void login(String email, String password){
         BBHP.clickBestBuy();
-        BBHP.loginWorkflow(email, password);
+        BBHP.redirecToLogin();
+        BBL.login(email, password);
     }
 }
