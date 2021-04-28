@@ -20,10 +20,10 @@ public class TestBestBuyPage extends BaseTest{
         BBHP.openAccountSettings();
         BBHP.openPhoneNumbers();
 //        Thread.sleep(7000);
-        BBHP.clickAddNewNumber();
-        BBHP.fillNumberInput(phone);
-        BBHP.saveRecoveryNumber();
+        BBPN.clickAddNewNumber();
+        BBPN.fillNumberInput(phone);
+        BBPN.saveRecoveryNumber();
         Thread.sleep(10000);
-        Assert.assertTrue(BBHP.isRecoveryNumberInvalid(), "Invalid Phone Number");
+        Assert.assertTrue(BBPN.isRecoveryNumberInvalid(), "Invalid Phone Number");
     }
 }

@@ -16,8 +16,8 @@ public class TestCreateAccount extends BaseTest{
         BBHP.openAccountMenu();
         BBHP.clickCreateAccount();
         HashMap<String, String> userInfo = mapUserData(firstName,lastName,email,password,phone);
-        BBHP.fillCreateAccountForm(userInfo);
-        BBHP.createAccount();
+        BBCA.fillCreateAccountForm(userInfo);
+        BBCA.createAccount();
         Thread.sleep(8000);
     }
 

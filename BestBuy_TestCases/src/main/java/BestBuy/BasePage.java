@@ -24,4 +24,8 @@ public class BasePage {
     public boolean displayedElement(By element){
         return driver.findElement(element).isDisplayed();
     }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
 }
