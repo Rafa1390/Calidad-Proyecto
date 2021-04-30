@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class BestBuyHomePage extends BasePage{
     //elements paths
-    By Close_Email_Modal = By.xpath("//*[@id=\"widgets-view-email-modal-mount\"]/div/div/div[1]/div/div/div/div/div");
+    By Close_Email_Modal = By.xpath("//button[@class=\"c-close-icon c-modal-close-icon\"]");
     By Account_Menu = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[1]/button/div[2]");
     By Create_Account_Btn = By.xpath("//*[@id=\"ABT2465Menu\"]/header/a[2]");
     By User_Account_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[2]/div/nav[2]/ul/li[1]/button");
