@@ -22,6 +22,7 @@ public class BaseTest {
     public BestBuyGiftCardConfiguration BBGCC;
     public BestBuyLogin BBL;
     public BestBuyPhoneNumbersPage BBPN;
+    public BestBuyRewardsPage BBRP;
 
     //Este test pertenece al CP-010
     @Parameters({"Browser", "URL"})
@@ -52,6 +53,7 @@ public class BaseTest {
         BBGCC = new BestBuyGiftCardConfiguration(driver);
         BBL = new BestBuyLogin(driver);
         BBPN = new BestBuyPhoneNumbersPage(driver);
+        BBRP = new BestBuyRewardsPage(driver);
     }
 
     @AfterClass
