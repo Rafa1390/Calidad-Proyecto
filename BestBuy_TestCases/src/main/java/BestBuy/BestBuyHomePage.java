@@ -25,6 +25,7 @@ public class BestBuyHomePage extends BasePage{
     By Item_Saved = By.xpath("//*[@id=\"account-menu-container\"]/div/div[2]/div/div[2]/div/div/ul/li/div/div[2]/a");
     By giftCardsAnchor = By.xpath("//a[contains(text(), \"Gift Cards\")]");
     By Account_Home_Btn = By.xpath("//*[@id=\"ABT2465Menu\"]/section[1]/ul/li[1]/a");
+    By Gift_Card_Btn = By.xpath("//*[@id=\"header-block\"]/div[2]/div[1]/div/div[2]/nav/ul/li[4]/a");
 
     BestBuyHomePage(WebDriver driver) {
         super(driver);
@@ -92,4 +93,8 @@ public class BestBuyHomePage extends BasePage{
     }
 
     public void clickAccountHome(){ click(Account_Home_Btn); }
+
+    public void clickGiftCard() {
+        click(Gift_Card_Btn);
+    }
 }
