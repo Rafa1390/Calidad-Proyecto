@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestCreateAccount extends BaseTest{
 
+    //Este test tambien valida el test CP-011
     @Parameters({"first-name", "last-name", "email", "password", "phone-number"})
     @Test
     public void createAccountTest(String firstName, String lastName, String email, String password, String phone) throws InterruptedException {
