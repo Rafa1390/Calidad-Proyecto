@@ -13,8 +13,7 @@ public class TestAddProduct extends BaseTest{
         BBCP.clickLenovoShopNow();
         Thread.sleep(5000);
         BBCP.clickSecondLenovoShopNow();
-        BBCP.shopComputer();
-        Thread.sleep(10000);
+        Thread.sleep(7000);
         BBCP.addComputerToCart();
         Thread.sleep(6000);
     }
