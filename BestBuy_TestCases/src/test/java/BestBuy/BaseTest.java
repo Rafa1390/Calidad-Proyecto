@@ -24,6 +24,7 @@ public class BaseTest {
     public BestBuyPhoneNumbersPage BBPN;
     public BestBuyRewardsPage BBRP;
 
+    //Este test pertenece al CP-010
     @Parameters({"Browser", "URL"})
     @BeforeClass
     public void TestSetUp(String browser, String url){
